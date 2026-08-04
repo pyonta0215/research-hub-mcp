@@ -1,0 +1,5 @@
+[
+  { "name": "zenn", "url": "https://zenn.dev/feed" },
+  { "name": "hatena-it", "url": "https://b.hatena.ne.jp/hotentry/it.rss" },
+  { "name": "publickey", "url": "https://www.publickey1.jp/atom.xml" }
+]
