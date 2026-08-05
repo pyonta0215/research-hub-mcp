@@ -1,3 +1,8 @@
 node_modules/
 dist/
 *.log
+
+# 秘密情報・ローカル設定（現状このリポジトリには無いが、事故防止のため先に塞ぐ）
+.env
+.env.*
+.claude/
