@@ -7,6 +7,18 @@
     "research-hub-mcp": "dist/index.js"
   },
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./lib": {
+      "types": "./dist/services/research.d.ts",
+      "default": "./dist/services/research.js"
+    },
+    "./schema": {
+      "types": "./dist/core/schema.d.ts",
+      "default": "./dist/core/schema.js"
+    },
+    "./config/feeds.json": "./config/feeds.json"
+  },
   "files": [
     "dist",
     "config/feeds.json",
