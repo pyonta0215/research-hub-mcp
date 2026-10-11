@@ -1,5 +1,7 @@
 # research-hub-mcp
 
+[![CI](https://github.com/pyonta0215/research-hub-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/pyonta0215/research-hub-mcp/actions/workflows/ci.yml)
+
 A research hub MCP server for AI agents. Search, browse trends, and dig into **Hacker News, arXiv, GitHub, and RSS feeds** through 4 unified tools with a single normalized schema.
 
 Instead of wrapping each API as a separate MCP server (and paying the context-window cost of 30+ tool definitions), research-hub bundles sources as adapters behind three verbs an agent actually needs: **search, trending, get_item**.
@@ -116,6 +118,8 @@ Tool definitions, the service layer, and the schema stay untouched. Planned next
 ## Development
 
 ```bash
+npm test        # offline unit tests (fetch is mocked; no network, no cache file)
+npm run typecheck
 npm run smoke   # live-API smoke test across all sources
 npm run dev     # run from source with tsx
 ```

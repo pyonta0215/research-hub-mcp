@@ -52,7 +52,9 @@ function normalize(raw: Raw, feedName: string): FeedEntry {
     title: stripHtml(textOf(raw.title)) || "(no title)",
     link: typeof raw.link === "string" ? raw.link : linkOf(raw.link),
     published: toIso(raw.pubDate ?? raw.published ?? raw.updated ?? raw["dc:date"]),
-    summary: summarySrc ? trimTo(stripHtml(summarySrc), 200) : undefined,
+    // processEntities: false のため、RSS 2.0 でよくある「エスケープされたHTML」の description は
+    // 1回目で &lt;p&gt; → <p> に戻るだけなので、もう1回かけてタグを落とす
+    summary: summarySrc ? trimTo(stripHtml(stripHtml(summarySrc)), 200) : undefined,
     feedName,
   };
 }

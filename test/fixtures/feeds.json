@@ -1,0 +1,5 @@
+[
+  { "name": "rss2", "url": "https://feeds.test/rss2.xml" },
+  { "name": "atom", "url": "https://feeds.test/atom.xml" },
+  { "name": "rdf", "url": "https://feeds.test/rdf.xml" }
+]
